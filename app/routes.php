@@ -20,6 +20,6 @@ return View::make('hello');
 }));
 
 // Route group for API versioning
-Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function() {
+Route::group(array('prefix' => 'api/v1'), function() {
   Route::resource('client', 'ClientController');
 });
